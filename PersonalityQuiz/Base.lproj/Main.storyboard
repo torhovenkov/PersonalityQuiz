@@ -19,8 +19,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J9d-tF-7wf">
                                 <rect key="frame" x="8" y="389" width="377" height="74.333333333333314"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What aninal are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-GG-RJX">
-                                        <rect key="frame" x="47.666666666666657" y="0.0" width="281.66666666666674" height="34.333333333333336"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What animal are you?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-GG-RJX">
+                                        <rect key="frame" x="43.333333333333343" y="0.0" width="290.33333333333326" height="34.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -326,10 +326,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="DXk-Uv-WgR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7l8-Vc-Jva"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="7l8-Vc-Jva">
+                            <connections>
+                                <segue destination="FjP-8h-a8u" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="qhW-fs-Fn6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="GbX-z5-3Ud" id="p6t-xG-TKN"/>
+                        <outlet property="resultDefinitionLabel" destination="xDX-JG-aOK" id="JW8-En-A7b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwg-9h-S2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="FjP-8h-a8u" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2373.2824427480914" y="3.5211267605633805"/>
         </scene>
