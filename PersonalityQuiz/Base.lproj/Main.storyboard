@@ -217,17 +217,26 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hbH-6C-qa2">
                                 <rect key="frame" x="30" y="808" width="333" height="4"/>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-X6-a12">
+                                <rect key="frame" x="20" y="76" width="353" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yWx-ko-dLp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yWx-ko-dLp" firstAttribute="bottom" secondItem="hbH-6C-qa2" secondAttribute="bottom" constant="30" id="BIm-Hb-ex3"/>
                             <constraint firstItem="yWx-ko-dLp" firstAttribute="trailing" secondItem="hbH-6C-qa2" secondAttribute="trailing" constant="30" id="CJs-mi-Cq9"/>
+                            <constraint firstItem="1m8-X6-a12" firstAttribute="top" secondItem="yWx-ko-dLp" secondAttribute="top" constant="20" id="Cq5-je-9NY"/>
                             <constraint firstItem="d41-gF-86t" firstAttribute="leading" secondItem="yWx-ko-dLp" secondAttribute="leading" constant="20" id="GS4-mw-UCm"/>
                             <constraint firstItem="J8D-kE-jWL" firstAttribute="leading" secondItem="yWx-ko-dLp" secondAttribute="leading" constant="20" id="HQ7-TN-knb"/>
                             <constraint firstItem="YmR-x0-0yn" firstAttribute="leading" secondItem="yWx-ko-dLp" secondAttribute="leading" constant="20" id="Ju3-DC-OTA"/>
+                            <constraint firstItem="1m8-X6-a12" firstAttribute="leading" secondItem="yWx-ko-dLp" secondAttribute="leading" constant="20" id="e2L-KU-zKo"/>
                             <constraint firstItem="J8D-kE-jWL" firstAttribute="centerY" secondItem="Gcg-Wz-LlV" secondAttribute="centerY" id="eg0-yv-aTZ"/>
                             <constraint firstItem="YmR-x0-0yn" firstAttribute="centerY" secondItem="Gcg-Wz-LlV" secondAttribute="centerY" id="f08-AX-1m0"/>
+                            <constraint firstItem="yWx-ko-dLp" firstAttribute="trailing" secondItem="1m8-X6-a12" secondAttribute="trailing" constant="20" id="inc-iF-3JS"/>
                             <constraint firstItem="yWx-ko-dLp" firstAttribute="trailing" secondItem="d41-gF-86t" secondAttribute="trailing" constant="20" id="leO-pd-zUA"/>
                             <constraint firstItem="d41-gF-86t" firstAttribute="centerY" secondItem="Gcg-Wz-LlV" secondAttribute="centerY" id="m09-31-Sfe"/>
                             <constraint firstItem="hbH-6C-qa2" firstAttribute="leading" secondItem="yWx-ko-dLp" secondAttribute="leading" constant="30" id="mBa-HC-elh"/>
@@ -237,6 +246,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="e2u-8E-yUG"/>
                     <connections>
+                        <outlet property="multipleStackView" destination="J8D-kE-jWL" id="hHr-8Q-aTv"/>
+                        <outlet property="rangedStackView" destination="YmR-x0-0yn" id="Ldy-6N-F9L"/>
+                        <outlet property="singleStackView" destination="d41-gF-86t" id="iDJ-ml-ZBq"/>
                         <segue destination="avY-TA-wmg" kind="show" identifier="Results" id="qna-Mu-Y0W"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,9 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
+    @IBOutlet var singleStackView: UIStackView!
+    @IBOutlet var multipleStackView: UIStackView!
+    @IBOutlet var rangedStackView: UIStackView!
     var questions: [Question] = [
             Question(text: "Which food do you like the most?",
                      type: .single,
@@ -38,9 +41,29 @@ class QuestionViewController: UIViewController {
                      ]
             )
         ]
+    var questionIndex = 0
+    
+    func updateUI() {
+        singleStackView.isHidden = true
+        multipleStackView.isHidden = true
+        rangedStackView.isHidden = true
+        
+        navigationItem.title = "Question number #\(questionIndex + 1)"
+        let currentQuestion = questions[questionIndex]
+        
+        switch currentQuestion.type {
+        case .single:
+            singleStackView.isHidden = false
+        case .multiple:
+            multipleStackView.isHidden = false
+        case .ranged:
+            rangedStackView.isHidden = false
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
 
         // Do any additional setup after loading the view.
     }
