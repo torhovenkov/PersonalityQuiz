@@ -15,6 +15,7 @@
 		A2AA04812A23D5CD00755D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2AA047F2A23D5CD00755D5F /* LaunchScreen.storyboard */; };
 		A2DAC5E72A23E0FE003F2DD5 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DAC5E62A23E0FE003F2DD5 /* QuestionViewController.swift */; };
 		A2DAC5E92A23E111003F2DD5 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DAC5E82A23E111003F2DD5 /* ResultsViewController.swift */; };
+		A2DAC5EB2A244743003F2DD5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DAC5EA2A244743003F2DD5 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A2AA04822A23D5CD00755D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DAC5E62A23E0FE003F2DD5 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		A2DAC5E82A23E111003F2DD5 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		A2DAC5EA2A244743003F2DD5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				A2DAC5E62A23E0FE003F2DD5 /* QuestionViewController.swift */,
 				A2DAC5E82A23E111003F2DD5 /* ResultsViewController.swift */,
 				A2AA047A2A23D5CC00755D5F /* Main.storyboard */,
+				A2DAC5EA2A244743003F2DD5 /* Question.swift */,
 				A2AA047D2A23D5CD00755D5F /* Assets.xcassets */,
 				A2AA047F2A23D5CD00755D5F /* LaunchScreen.storyboard */,
 				A2AA04822A23D5CD00755D5F /* Info.plist */,
@@ -147,6 +150,7 @@
 				A2AA04792A23D5CC00755D5F /* IntroductionViewController.swift in Sources */,
 				A2AA04752A23D5CC00755D5F /* AppDelegate.swift in Sources */,
 				A2DAC5E72A23E0FE003F2DD5 /* QuestionViewController.swift in Sources */,
+				A2DAC5EB2A244743003F2DD5 /* Question.swift in Sources */,
 				A2DAC5E92A23E111003F2DD5 /* ResultsViewController.swift in Sources */,
 				A2AA04772A23D5CC00755D5F /* SceneDelegate.swift in Sources */,
 			);
