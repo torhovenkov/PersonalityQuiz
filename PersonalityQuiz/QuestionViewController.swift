@@ -88,6 +88,16 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    func nextQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+        } else {
+            performSegue(withIdentifier: "Results", sender: nil)
+        }
+    }
+    
     @IBAction func singleButtonPressed(_ sender: UIButton) {
         let currentAswers = questions[questionIndex].answers
         
@@ -103,7 +113,7 @@ class QuestionViewController: UIViewController {
         default:
             break
         }
-//        nextQuestion()
+        nextQuestion()
     }
     @IBAction func multipleAnswerButtonPressed() {
         let currentAswers = questions[questionIndex].answers
@@ -121,7 +131,7 @@ class QuestionViewController: UIViewController {
             answerChosen.append(currentAswers[3])
         }
         
-        //nextQuestion()
+        nextQuestion()
     }
     
     @IBAction func rangedButtonPressed(_ sender: Any) {
@@ -129,7 +139,7 @@ class QuestionViewController: UIViewController {
         let index = Int(round(rangeSlider.value * Float(currentAswers.count - 1)))
         answerChosen.append(currentAswers[index])
         
-//        nextQuestion()
+        nextQuestion()
     }
     
     
@@ -142,6 +152,11 @@ class QuestionViewController: UIViewController {
         singleButton4.setTitle(answers[3].text, for: .normal)
     }
     func updateMultipleStack(using answers: [Answer]) {
+        multipleStackView.isHidden = false
+        multiSwitch1.isOn = false
+        multiSwitch2.isOn = false
+        multiSwitch3.isOn = false
+        multiSwitch4.isOn = false
         multiLabel1.text = answers[0].text
         multiLabel2.text = answers[1].text
         multiLabel3.text = answers[2].text
@@ -149,10 +164,14 @@ class QuestionViewController: UIViewController {
     }
     func updateRangedStack(using answers: [Answer]) {
         rangedStackView.isHidden = false
+        rangeSlider.setValue(0.5, animated: false)
         rangedLabel1.text = answers.first?.text
         rangedLabel2.text = answers.last?.text
     }
     
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsViewController? {
+        return ResultsViewController(coder: coder, responses: answerChosen)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
